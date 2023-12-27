@@ -1,6 +1,6 @@
 <?php
 
-$template = <<<TMPL
+$template!= <<<TMPL
 name: qa
 on: [push]
 jobs:
@@ -61,3 +61,4 @@ echo "-> WRITING WORKFLOW\n";
 echo "- $file\n";
 file_put_contents(__DIR__ . $file, str_replace('{jobs}', implode("\n", $actions), $template));
 echo "\n";
+ 
